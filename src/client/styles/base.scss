@@ -1,0 +1,22 @@
+$color-primary: rgba(25, 31, 25, 0.5);
+$color-primary-dark: rgb(0, 0, 0);
+$general-margin: 15px;
+
+@mixin borders {
+  border: 1px solid white;
+  border-radius: 20px;
+}
+* {
+  background-color: $color-primary;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 2;
+  height: 50%;
+}

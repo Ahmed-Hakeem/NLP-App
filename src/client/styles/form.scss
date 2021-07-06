@@ -1,0 +1,76 @@
+$color-primary: rgba(25, 31, 25, 0.5);
+$color-primary-dark: rgb(0, 0, 0);
+$general-margin: 15px;
+
+@mixin borders {
+  border: 1px solid #ababab;
+  border-radius: 20px;
+}
+section {
+  //   background-color: noe;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  border: 1px solid #555;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 20px;
+
+  form {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #e6dada; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom right,
+      #c6c6c6,
+      #898989
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    input {
+      padding: 5px 20px;
+      width: 100%;
+      line-height: 16px;
+      margin: 10px 0;
+      background-color: black;
+
+      @include borders;
+      &#submit {
+        background-color: black;
+        color: white;
+        width: 40%;
+        height: 40px;
+        cursor: pointer;
+      }
+      &#name {
+        height: 30px;
+        background-color: black;
+        color: #ababab;
+        text-align: center;
+      }
+    }
+  }
+  div {
+    margin-bottom: $general-margin;
+    background-color: rgba(25, 31, 25, 0);
+  }
+  p {
+    margin-bottom: $general-margin;
+    font-size: 20px;
+    background-color: $color-primary-dark;
+    color: #ababab;
+  }
+  table {
+    width: 100%;
+    @include borders;
+    transition: 1s;
+
+    th,
+    td {
+      padding: 5px;
+      @include borders;
+      text-align: center;
+    }
+  }
+}
